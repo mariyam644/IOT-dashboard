@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 2 Access - IoT Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #edf4ff, #f7faff);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 15px 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #004aad;
+    }
+
+    .menu {
+      display: flex;
+      gap: 25px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .menu a:hover {
+      background-color: #e6f0ff;
+      color: #004aad;
+    }
+
+    .menu a.active {
+      background-color: #dbeaff;
+      color: #004aad;
+      font-weight: 600;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 450px;
+      text-align: center;
+    }
+
+    .info-box {
+      background-color: #f5f5f5;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .info-box .lock-icon {
+      font-size: 36px;
+      color: #f4b400;
+    }
+
+    .info-box h2 {
+      font-size: 20px;
+      color: #002b5b;
+      font-weight: 700;
+      margin: 10px 0 5px;
+    }
+
+    .info-box p {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .input-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      background: white;
+    }
+
+    .input-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      padding: 5px;
+      font-family: 'Inter', sans-serif;
+      background: transparent;
+    }
+
+    .input-box .eye {
+      font-size: 18px;
+      color: #777;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #004aad;
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      width: 100%;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 15px;
+      transition: background 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #003385;
+    }
+
+    .btn-secondary {
+      background-color: #f2f2f2;
+      color: #444;
+      border: none;
+      padding: 12px 18px;
+      width: 100%;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: #e0e0e0;
+      color: #222;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">📊 IoT Dashboard</div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Room Dashboard</a>
+      <a href="#">Room Data</a>
+      <a href="#">Temperature Graph</a>
+      <a href="#" class="active">Set Threshold</a>
+      <a href="#">Edit Device</a>
+    </div>
+    <div class="user">
+      <span>👤</span>
+      <span>Admin ▼</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <div class="info-box">
+        <div class="lock-icon">🔒</div>
+        <h2>Level 2 Access Required</h2>
+        <p>Please enter your level 2 password to modify threshold values</p>
+      </div>
+
+      <div class="input-box">
+        <input type="password" placeholder="Enter Level 2 Password">
+        <span class="eye">👁️</span>
+      </div>
+
+      <button class="btn-primary">Verify & Continue</button>
+      <button class="btn-secondary">Cancel & Go Back</button>
+    </div>
+  </div>
+
+</body>
+</html>

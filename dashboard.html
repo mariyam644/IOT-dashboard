@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Room Dashboard - IoT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #f0f5ff, #f7f7f7);
+      color: #333;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-weight: bold;
+      color: #004aad;
+      font-size: 20px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 25px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .menu a:hover {
+      background-color: #e6f0ff;
+      color: #004aad;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .main {
+      padding: 40px 60px;
+    }
+
+    .main h1 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .main p {
+      margin-top: 0;
+      color: #666;
+    }
+
+    .rooms-grid {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .room-card {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+      position: relative;
+      color: white;
+    }
+
+    .room-card:hover {
+      background: #cccccc !important;
+      color: #000;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .room-card .icon {
+      font-size: 28px;
+      background: white;
+      color: #444;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .room-card h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .room-card p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .add-btn {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .add-btn button {
+      background-color: #00a86b;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .add-btn button:hover {
+      background-color: #008e5a;
+    }
+
+    /* Room gradient themes */
+  /* Clean and balanced room gradient themes */
+  .room1 { background: linear-gradient(135deg, #3b5998, #8b9dc3); }      /* Indigo to soft blue */
+  .room2 { background: linear-gradient(135deg, #4b0082, #708238); }      /* Indigo to Olive (your request) */
+  .room3 { background: linear-gradient(135deg, #2e8b57, #98fb98); }      /* Sea green to mint */
+  .room4 { background: linear-gradient(135deg, #4682b4, #a9cfe7); }      /* Steel blue to light blue */
+  .room5 { background: linear-gradient(135deg, #556b2f, #bdb76b); }      /* Olive green to khaki */
+  .room6 { background: linear-gradient(135deg, #6a5acd, #b0c4de); }      /* Slate blue to lavender */
+  .room7 { background: linear-gradient(135deg, #1e90ff, #87cefa); }      /* Dodger blue to sky blue */
+  .room8 { background: linear-gradient(135deg, #2f4f4f, #778899); }      /* Dark slate gray to light slate */
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="logo">🌐 IoT Dashboard</div>
+  <div class="menu">
+    <a href="#">Home</a>
+    <a href="#">Room Dashboard</a>
+    <a href="#">Room Data</a>
+    <a href="#">Temperature Graph</a>
+    <a href="#">Set Threshold</a>
+    <a href="#">Edit Device</a>
+  </div>
+  <div class="user">
+    <span>👤</span>
+    <span>Admin ▼</span>
+  </div>
+</header>
+
+<div class="main">
+  <h1>Room Dashboard</h1>
+  <p>Monitor all your connected devices</p>
+
+  <div class="rooms-grid">
+    <div class="room-card room1">
+      <div class="icon">🏠</div>
+      <h3>Room 1</h3>
+      <p>Active</p>
+    </div>
+    <div class="room-card room2">
+      <div class="icon">🏠</div>
+      <h3>Room 2</h3>
+      <p>Active</p>
+    </div>
+    <div class="room-card room3">
+      <div class="icon">🏠</div>
+      <h3>Room 3</h3>
+      <p>Active</p>
+    </div>
+    <div class="room-card room4">
+      <div class="icon">🏠</div>
+      <h3>Room 4</h3>
+      <p>Active</p>
+    </div>
+    <div class="room-card room5">
+      <div class="icon">🏠</div>
+      <h3>Room 5</h3>
+      <p>Active</p>
+    </div>
+    <div class="room-card room6">
+      <div class="icon">🏠</div>
+      <h3>Room 6</h3>
+      <p>Active</p>
+    </div>
+    <div class="room-card room7">
+      <div class="icon">🏠</div>
+      <h3>Room 7</h3>
+      <p>Active</p>
+    </div>
+    <div class="room-card room8">
+      <div class="icon">🏠</div>
+      <h3>Room 8</h3>
+      <p>Active</p>
+    </div>
+  </div>
+
+  <div class="add-btn">
+    <button>➕ Add New Device</button>
+  </div>
+</div>
+
+</body>
+</html>
